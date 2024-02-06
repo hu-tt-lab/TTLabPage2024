@@ -10,6 +10,6 @@ export function Root() {
           ー新技術と創造で結ぶ知のかけ橋の場ー
         </Typography>
       </Stack>
-    </CogmmonContainer>
+    </CommonContainer>
   );
 }
