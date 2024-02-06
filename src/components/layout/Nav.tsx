@@ -1,11 +1,17 @@
+import { Button } from "../common";
+
 export function Nav() {
   return (
     <ul>
       <li>
-        <a href="/">root</a>
+        <Button href="/" variant="contained">
+          root
+        </Button>
       </li>
       <li>
-        <a href="/about">about</a>
+        <Button href="/about" variant="contained">
+          about
+        </Button>
       </li>
     </ul>
   );

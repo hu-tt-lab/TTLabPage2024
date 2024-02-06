@@ -1,3 +1,5 @@
+import { CommonContainer } from "../components/layout";
+
 export function About() {
-  return <div>This is about page</div>;
+  return <CommonContainer>This is about page</CommonContainer>;
 }

@@ -1,13 +1,22 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Route, Routes as RRDRoutes } from "react-router-dom";
 import { Root, About } from "./pages";
 
-export const router = createBrowserRouter([
-  {
+export const ROUTES = {
+  root: {
     path: "/",
-    element: <Root />,
+    navLabel: "Home",
   },
-  {
+  about: {
     path: "/about",
-    element: <About />,
+    navLabel: "About",
   },
-]);
+} as const;
+
+export function Routes() {
+  return (
+    <RRDRoutes>
+      <Route path={ROUTES.root.path} element={<Root />} />
+      <Route path={ROUTES.root.path} element={<About />} />
+    </RRDRoutes>
+  );
+}
