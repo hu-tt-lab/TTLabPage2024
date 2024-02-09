@@ -1,8 +1,14 @@
-import { Route, Routes as RRDRoutes } from "react-router-dom";
-import { Root, About } from "./pages";
+import { Link, Route, Routes as RRDRoutes } from "react-router-dom";
+import { List, ListItem, ListItemButton } from "./components/common";
+import { ReactNode } from "react";
 
+// ページ
+import Home from "./pages/home.mdx";
+import About from "./pages/about.mdx";
+
+// ルーティングの定義
 export const ROUTES = {
-  root: {
+  home: {
     path: "/",
     navLabel: "Home",
   },
@@ -10,13 +16,41 @@ export const ROUTES = {
     path: "/about",
     navLabel: "About",
   },
-} as const;
+};
 
+// ルーティング
 export function Routes() {
   return (
     <RRDRoutes>
-      <Route path={ROUTES.root.path} element={<Root />} />
-      <Route path={ROUTES.root.path} element={<About />} />
+      <Route path={ROUTES.home.path} element={<Home />} />
+
+      <Route path={ROUTES.about.path} element={<About />} />
     </RRDRoutes>
+  );
+}
+
+// メニュー
+export function Menu() {
+  return (
+    <List>
+      <MenuItem to={ROUTES.home.path}>{ROUTES.home.navLabel}</MenuItem>
+      <MenuItem to={ROUTES.about.path}>{ROUTES.about.navLabel}</MenuItem>
+    </List>
+  );
+}
+
+// コンポーネント
+
+type MenuItemProps = {
+  to: string;
+  children: ReactNode;
+};
+function MenuItem({ to = "", children }: MenuItemProps) {
+  return (
+    <ListItem>
+      <ListItemButton component={Link} to={to}>
+        {children}
+      </ListItemButton>
+    </ListItem>
   );
 }

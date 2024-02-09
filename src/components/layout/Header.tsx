@@ -4,7 +4,7 @@ import { MenuDrawer } from "./menu/MenuDrawer";
 import { useState } from "react";
 import { MenuButton } from "./menu/MenuButton";
 import { useMediaQuery } from "@mui/material";
-import theme from "../../styles/theme";
+import { theme } from "../../styles";
 
 export function Header() {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);

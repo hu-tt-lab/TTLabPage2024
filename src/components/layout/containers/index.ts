@@ -1,1 +1,1 @@
-export * from "./CommonContainer";
+export * from "./MdxPageContainer";
