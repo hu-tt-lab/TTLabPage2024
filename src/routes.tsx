@@ -48,6 +48,7 @@ type MenuItemProps = {
 function MenuItem({ to = "", children }: MenuItemProps) {
   return (
     <ListItem>
+      {/* @ts-ignore */}
       <ListItemButton component={Link} to={to}>
         {children}
       </ListItemButton>
