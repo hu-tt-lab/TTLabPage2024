@@ -30,11 +30,18 @@ export function Routes() {
 }
 
 // メニュー
-export function Menu() {
+export type MenuProps = {
+  onClick?: () => void;
+};
+export function Menu({ onClick }: MenuProps) {
   return (
     <List>
-      <MenuItem to={ROUTES.home.path}>{ROUTES.home.navLabel}</MenuItem>
-      <MenuItem to={ROUTES.about.path}>{ROUTES.about.navLabel}</MenuItem>
+      <MenuItem onClick={onClick} to={ROUTES.home.path}>
+        {ROUTES.home.navLabel}
+      </MenuItem>
+      <MenuItem onClick={onClick} to={ROUTES.about.path}>
+        {ROUTES.about.navLabel}
+      </MenuItem>
     </List>
   );
 }
@@ -44,12 +51,13 @@ export function Menu() {
 type MenuItemProps = {
   to: string;
   children: ReactNode;
+  onClick?: () => void;
 };
-function MenuItem({ to = "", children }: MenuItemProps) {
+function MenuItem({ to = "", children, onClick }: MenuItemProps) {
   return (
     <ListItem>
       {/* @ts-ignore */}
-      <ListItemButton component={Link} to={to}>
+      <ListItemButton onClick={onClick} component={Link} to={to}>
         {children}
       </ListItemButton>
     </ListItem>

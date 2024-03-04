@@ -11,8 +11,8 @@ import { LangType } from "./types";
 // language context
 export type LangContextType = [LangType, Dispatch<SetStateAction<LangType>>];
 export const LangContext = createContext<
-  LangContextType | [undefined, undefined]
->([undefined, undefined]);
+  LangContextType | [LangType, undefined]
+>(["en", undefined]);
 
 // Hooks for lang context
 export const useLangContext = () => useContext(LangContext);

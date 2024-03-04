@@ -16,6 +16,10 @@ export function Header() {
   const closeMenu = () => {
     setMenuIsOpen(false);
   };
+  const handleMenuChange = () => {
+    closeMenu();
+  };
+
   const handleMenuButtonClick = () => {
     openMenu();
   };
@@ -36,7 +40,11 @@ export function Header() {
           </Stack>
         </Link>
         <Box sx={{ flexGrow: 1 }} />
-        <MenuDrawer open={menuIsOpen} onClose={closeMenu} />
+        <MenuDrawer
+          open={menuIsOpen}
+          onClick={handleMenuChange}
+          onClose={closeMenu}
+        />
       </Toolbar>
     </AppBar>
   );
