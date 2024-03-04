@@ -4,16 +4,20 @@ import App from "./App.tsx";
 import { MDXProvider } from "@mdx-js/react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
-import { components, theme } from "./styles";
+import { theme } from "./styles";
+import { mdxComponents } from "./components/layout";
+import { LangContextProvider } from "./features/language";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <CssBaseline />
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <MDXProvider components={components}>
-          <App />
-        </MDXProvider>
+        <LangContextProvider>
+          <MDXProvider components={mdxComponents}>
+            <App />
+          </MDXProvider>
+        </LangContextProvider>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
