@@ -8,6 +8,8 @@ export * from "./Link";
 export * from "./List";
 export * from "./ListItem";
 export * from "./ListItemButton";
+export * from "./MenuItem";
+export * from "./Select";
 export * from "./Stack";
 export * from "./Toolbar";
 export * from "./Typography";
