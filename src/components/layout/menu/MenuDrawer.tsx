@@ -1,6 +1,6 @@
 import { Drawer, MenuItem, Select } from "../../common";
 import { Menu } from "../../../routes";
-import { LangType, useLangContext } from "../../../features/language";
+import { LangType, useLangContext } from "../../language";
 import { SelectChangeEvent } from "@mui/material";
 import { useState } from "react";
 

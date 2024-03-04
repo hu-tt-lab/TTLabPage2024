@@ -6,16 +6,13 @@ import {
   useContext,
   useState,
 } from "react";
-
-// Language type
-export const LANGS = ["ja", "en"] as const;
-export type LangType = (typeof LANGS)[number];
+import { LangType } from "./types";
 
 // language context
 export type LangContextType = [LangType, Dispatch<SetStateAction<LangType>>];
-export const LangContext = createContext<LangContextType | undefined>(
-  undefined
-);
+export const LangContext = createContext<
+  LangContextType | [undefined, undefined]
+>([undefined, undefined]);
 
 // Hooks for lang context
 export const useLangContext = () => useContext(LangContext);

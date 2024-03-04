@@ -6,7 +6,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
 import { theme } from "./styles";
 import { mdxComponents } from "./components/layout";
-import { LangContextProvider } from "./features/language";
+import { LangContextProvider } from "./components/language/index.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
