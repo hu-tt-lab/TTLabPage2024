@@ -10,8 +10,8 @@ import { LangContextProvider } from "./components/language/index.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <CssBaseline />
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <BrowserRouter>
         <LangContextProvider>
           <MDXProvider components={mdxComponents}>
