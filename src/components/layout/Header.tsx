@@ -1,5 +1,4 @@
-import { Psychology } from "@mui/icons-material";
-import { AppBar, Box, Link, Stack, Toolbar, Typography } from "../common";
+import { AppBar, Box, Link, Stack, Toolbar } from "../common";
 import { MenuDrawer } from "./menu/MenuDrawer";
 import { useState } from "react";
 import { MenuButton } from "./menu/MenuButton";
@@ -35,8 +34,7 @@ export function Header() {
 
         <Link href="/" color="inherit" underline="none">
           <Stack flexDirection="row" flexWrap="nowrap">
-            <Psychology />
-            <Typography variant="h6">TT Lab</Typography>
+            <img src="/logo-light.svg" height="40px" />
           </Stack>
         </Link>
         <Box sx={{ flexGrow: 1 }} />
