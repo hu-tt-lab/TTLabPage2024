@@ -1,12 +1,10 @@
-import { IconButton, MenuIcon } from "../../common";
+import { IconButton, IconButtonProps, MenuIcon } from "../../common";
 
-export type MenuButtonProps = {
-  onClick?: () => void;
-};
-export function MenuButton({ onClick }: MenuButtonProps) {
+export type MenuButtonProps = IconButtonProps;
+export function MenuButton({ color, ...props }: MenuButtonProps) {
   return (
-    <IconButton onClick={onClick} color="inherit">
-      <MenuIcon />
+    <IconButton {...props} color={color ?? "inherit"}>
+      <MenuIcon fontSize="large" />
     </IconButton>
   );
 }

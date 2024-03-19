@@ -30,7 +30,7 @@ export function Header() {
       sx={{ bgcolor: "#fff6", backdropFilter: "blur(8px)" }}
     >
       <Toolbar variant="regular">
-        {!isLg && <MenuButton onClick={handleMenuButtonClick} />}
+        {!isLg && <MenuButton onClick={handleMenuButtonClick} sx={{ mr: 1 }} />}
 
         <Link href="/" color="inherit" underline="none">
           <Stack flexDirection="row" flexWrap="nowrap">
