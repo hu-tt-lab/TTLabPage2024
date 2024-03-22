@@ -3,3 +3,4 @@ export * from "./Ja";
 export * from "./types";
 export * from "./En";
 export * from "./LangSelection";
+export * from "./LangContext";
