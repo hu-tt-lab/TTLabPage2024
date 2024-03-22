@@ -1,5 +1,5 @@
 import { SvgIconProps as MIconProps } from "@mui/material";
-import { Menu, Psychology } from "@mui/icons-material";
+import { Language, Menu, Psychology } from "@mui/icons-material";
 
 export type IconProps = MIconProps;
 
@@ -9,4 +9,8 @@ export function MenuIcon(props: IconProps) {
 
 export function PsychologyIcon(props: IconProps) {
   return <Psychology {...props} />;
+}
+
+export function LanguageIcon(props: IconProps) {
+  return <Language {...props} />;
 }

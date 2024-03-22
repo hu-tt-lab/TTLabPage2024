@@ -11,40 +11,66 @@ import Publications from "./pages/publications.mdx";
 import Awards from "./pages/awards.mdx";
 import Theme from "./pages/theme.mdx";
 import Studylife from "./pages/studylife.mdx";
+import Books from "./pages/books.mdx";
+import Internship from "./pages/internship.mdx";
+import Outreach from "./pages/outreach.mdx";
 
 // ルーティングの定義
-export const ROUTES = {
+const ROUTES = {
   home: {
     path: "/",
     navLabel: "Home",
+    element: <Home />,
   },
   about: {
     path: "/about",
     navLabel: "About",
+    element: <About />,
   },
   members: {
     path: "/members",
     navLabel: "Members",
+    element: <Members />,
   },
   projects: {
     path: "/projects",
     navLabel: "Projects",
+    element: <Projects />,
   },
   publications: {
     path: "/publications",
     navLabel: "Publications",
+    element: <Publications />,
   },
   awards: {
     path: "/awards",
     navLabel: "Awards",
+    element: <Awards />,
   },
   theme: {
     path: "/theme",
-    navLabel: "Theme",
+    navLabel: "Themes",
+    element: <Theme />,
   },
   studylife: {
     path: "/studylife",
-    navLabel: "Studylife",
+    navLabel: "Life in our lab",
+    element: <Studylife />,
+  },
+  books: {
+    path: "/books",
+    navLabel: "Books",
+    element: <Books />,
+  },
+  internship: {
+    path: "/internship",
+    navLabel: "Internship",
+    element: <Internship />,
+  },
+  outreach: {
+    path: "/outreach",
+    navLabel: "Outreach",
+    element: <Outreach />,
   },
 };
 
@@ -52,63 +78,39 @@ export const ROUTES = {
 export function Routes() {
   return (
     <RRDRoutes>
-      <Route path={ROUTES.home.path} element={<Home />} />
-      <Route path={ROUTES.about.path} element={<About />} />
-      <Route path={ROUTES.members.path} element={<Members />} />
-      <Route path={ROUTES.projects.path} element={<Projects />} />
-      <Route path={ROUTES.publications.path} element={<Publications />} />
-      <Route path={ROUTES.awards.path} element={<Awards />} />
-      <Route path={ROUTES.theme.path} element={<Theme />} />
-      <Route path={ROUTES.studylife.path} element={<Studylife />} />
+      {Object.values(ROUTES).map((route) => (
+        <Route key={route.path} path={route.path} element={route.element} />
+      ))}
     </RRDRoutes>
   );
 }
 
 // メニュー
-export type MenuProps = {
+export type RouteListProps = {
   onClick?: () => void;
 };
-export function Menu({ onClick }: MenuProps) {
+export function RouteList({ onClick }: RouteListProps) {
   return (
     <List>
-      <MenuItem onClick={onClick} to={ROUTES.home.path}>
-        {ROUTES.home.navLabel}
-      </MenuItem>
-      <MenuItem onClick={onClick} to={ROUTES.about.path}>
-        {ROUTES.about.navLabel}
-      </MenuItem>
-      <MenuItem onClick={onClick} to={ROUTES.members.path}>
-        {ROUTES.members.navLabel}
-      </MenuItem>
-      <MenuItem onClick={onClick} to={ROUTES.projects.path}>
-        {ROUTES.projects.navLabel}
-      </MenuItem>
-      <MenuItem onClick={onClick} to={ROUTES.publications.path}>
-        {ROUTES.publications.navLabel}
-      </MenuItem>
-      <MenuItem onClick={onClick} to={ROUTES.awards.path}>
-        {ROUTES.awards.navLabel}
-      </MenuItem>
-      <MenuItem onClick={onClick} to={ROUTES.theme.path}>
-        {ROUTES.theme.navLabel}
-      </MenuItem>
-      <MenuItem onClick={onClick} to={ROUTES.studylife.path}>
-        {ROUTES.studylife.navLabel}
-      </MenuItem>
+      {Object.values(ROUTES).map((route) => (
+        <RouteListItem key={route.path} onClick={onClick} to={route.path}>
+          {route.navLabel}
+        </RouteListItem>
+      ))}
     </List>
   );
 }
 
 // コンポーネント
 
-type MenuItemProps = {
+type RouteListItemProps = {
   to: string;
   children: ReactNode;
   onClick?: () => void;
 };
-function MenuItem({ to = "", children, onClick }: MenuItemProps) {
+function RouteListItem({ to = "", children, onClick }: RouteListItemProps) {
   return (
-    <ListItem>
+    <ListItem sx={{ p: 0 }}>
       {/* @ts-ignore */}
       <ListItemButton onClick={onClick} component={Link} to={to}>
         {children}

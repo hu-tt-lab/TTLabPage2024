@@ -1,4 +1,4 @@
 export * from "./Footer";
 export * from "./Header";
-export * from "./Nav";
-export * from "./mdx";
+export * from "./MDX";
+export * from "./Menu";

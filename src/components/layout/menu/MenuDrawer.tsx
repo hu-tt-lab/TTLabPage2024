@@ -1,6 +1,5 @@
 import { Drawer } from "../../common";
-import { Menu } from "../../../routes";
-import { LangSelection } from "../../language";
+import { Menu } from ".";
 
 export type MenuDrawerProps = {
   open?: boolean;
@@ -10,9 +9,8 @@ export type MenuDrawerProps = {
 
 export function MenuDrawer({ open, onClose, onClick }: MenuDrawerProps) {
   return (
-    <Drawer open={open} anchor="left" onClose={onClose}>
-      <Menu onClick={onClick} />
-      <LangSelection />
+    <Drawer open={open} anchor="right" onClose={onClose}>
+      <Menu onClick={onClick} sx={{ p: 1 }} />
     </Drawer>
   );
 }

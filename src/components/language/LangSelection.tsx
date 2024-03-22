@@ -1,4 +1,4 @@
-import { MenuItem, Select } from "../common";
+import { LanguageIcon, MenuItem, Select } from "../common";
 import { LangType, useLangContext } from ".";
 import { SelectChangeEvent } from "@mui/material";
 
@@ -12,12 +12,16 @@ export const LangSelection = () => {
   return (
     <Select
       variant="standard"
+      color="primary"
       value={lang}
       onChange={handleChange}
       sx={{ mx: 2 }}
+      startAdornment={
+        <LanguageIcon fontSize="small" sx={{ mr: 1, color: "#888" }} />
+      }
     >
-      <MenuItem value="ja">Ja</MenuItem>
-      <MenuItem value="en">En</MenuItem>
+      <MenuItem value="ja">日本語</MenuItem>
+      <MenuItem value="en">English</MenuItem>
     </Select>
   );
 };

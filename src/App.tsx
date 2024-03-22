@@ -1,6 +1,6 @@
-import { Footer, Header } from "./components/layout";
+import { Footer, Header, Menu } from "./components/layout";
 import { Box, Stack } from "./components/common";
-import { Menu, Routes } from "./routes";
+import { Routes } from "./routes";
 import { useMediaQuery } from "@mui/material";
 import { theme } from "./styles";
 import { ReactNode } from "react";
@@ -8,12 +8,10 @@ import { ReactNode } from "react";
 function App() {
   return (
     <Container>
-      <Stack sx={{ flexGrow: 1 }}>
-        <Box sx={{ flexGrow: 1, margin: 0, padding: 0, alignitems: "center" }}>
-          <Routes />
-        </Box>
-        <Footer />
-      </Stack>
+      <Box sx={{ flexGrow: 1, margin: 0, padding: 0, alignitems: "center" }}>
+        <Routes />
+      </Box>
+      <Footer />
     </Container>
   );
 }
@@ -28,12 +26,12 @@ function Container({ children }: ContainerProps) {
     <Stack sx={{ height: "100vh" }}>
       <Header />
       {isLg ? (
-        <Stack sx={{ flexDirection: "row", flexGrow: 1 }}>
-          <Menu />
-          {children}
+        <Stack sx={{ flexDirection: "row", flexGrow: 1, overflowY: "auto" }}>
+          <Menu sx={{ ml: 1, minWidth: 150 }} />
+          <Stack sx={{ flexGrow: 1, overflowY: "auto" }}>{children}</Stack>
         </Stack>
       ) : (
-        <> {children}</>
+        <>{children}</>
       )}
     </Stack>
   );
