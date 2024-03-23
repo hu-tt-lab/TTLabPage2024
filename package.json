@@ -1,7 +1,7 @@
 {
   "name": "ttlabpage2024",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/inter": "^5.0.17",
     "@fontsource/noto-sans-jp": "^5.0.18",
     "@fontsource/noto-serif-jp": "^5.0.11",
     "@mdx-js/react": "^3.0.0",
