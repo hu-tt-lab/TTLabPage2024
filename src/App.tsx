@@ -27,7 +27,7 @@ function Container({ children }: ContainerProps) {
       <Header />
       {isLg ? (
         <Stack sx={{ flexDirection: "row", flexGrow: 1, overflowY: "auto" }}>
-          <Menu sx={{ mx: 1, minWidth: 160 }} />
+          <Menu sx={{ mx: 1, width: 160, flexShrink: 0 }} />
           <Stack sx={{ flexGrow: 1, overflowY: "auto" }}>{children}</Stack>
         </Stack>
       ) : (
