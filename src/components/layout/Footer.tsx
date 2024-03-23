@@ -11,8 +11,8 @@ export function Footer() {
         p: 2,
       }}
     >
-      <Typography>
-        &copy; {currYear} Neural Control Engineering Group.
+      <Typography variant="body2" color="gray">
+        &copy; {currYear} Neural Control Engineering Group
       </Typography>
     </Stack>
   );

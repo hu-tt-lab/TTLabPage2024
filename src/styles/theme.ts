@@ -1,16 +1,20 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
+import { teal, grey } from "@mui/material/colors";
 import "@fontsource/noto-sans-jp";
 import "@fontsource/noto-serif-jp";
-import { red } from "@mui/material/colors";
+import "@fontsource/inter";
 
-const bodyFontFamily = ["Times New Roman", "Noto Serif JP", "serif"].join(",");
-const headingFontFamily = ["Times New Roman", "Noto Serif JP", "serif"].join(
-  ","
-);
+const bodyFontFamily = ["Inter", "Noto Sans JP", "sans-serif"].join(", ");
+const headingFontFamily = ["Inter", "Noto Sans JP", "sans-serif"].join(", ");
+
+const primary = teal;
 
 const _theme = createTheme({
   palette: {
-    primary: red,
+    primary: primary,
+    text: {
+      primary: grey[900],
+    },
   },
   typography: {
     fontFamily: bodyFontFamily,
@@ -18,28 +22,31 @@ const _theme = createTheme({
     h1: {
       fontFamily: headingFontFamily,
       fontSize: 32,
+      fontWeight: "bold",
+      color: primary[600],
     },
     h2: {
       fontFamily: headingFontFamily,
       fontSize: 40,
       fontWeight: "bold",
       marginBottom: 16,
+      marginTop: 20,
     },
     h3: {
       fontFamily: headingFontFamily,
       fontSize: 32,
       marginBottom: 12,
-      marginTop: 16,
+      marginTop: 18,
     },
     h4: {
       fontFamily: headingFontFamily,
-      fontSize: 28,
+      fontSize: 24,
       marginBottom: 8,
       marginTop: 12,
     },
     h5: {
       fontFamily: headingFontFamily,
-      fontSize: 24,
+      fontSize: 22,
     },
     h6: {
       fontFamily: headingFontFamily,
@@ -47,6 +54,13 @@ const _theme = createTheme({
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: "#f4f4f4",
+        },
+      },
+    },
     MuiAppBar: {
       defaultProps: {
         elevation: 0,

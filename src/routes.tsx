@@ -1,15 +1,22 @@
 import { Link, Route, Routes as RRDRoutes } from "react-router-dom";
-import { List, ListItem, ListItemButton } from "./components/common";
+import {
+  List,
+  ListItem,
+  ListItemButton,
+  Typography,
+} from "./components/common";
 import { ReactNode } from "react";
 
 // ページ
 import Home from "./pages/home.mdx";
 import About from "./pages/about.mdx";
 import Members from "./pages/members.mdx";
+import Gallery from "./pages/gallery.mdx";
 import Projects from "./pages/projects.mdx";
 import Publications from "./pages/publications.mdx";
 import Awards from "./pages/awards.mdx";
 import Theme from "./pages/theme.mdx";
+import Highlights from "./pages/highlights.mdx";
 import Studylife from "./pages/studylife.mdx";
 import Books from "./pages/books.mdx";
 import Internship from "./pages/internship.mdx";
@@ -32,6 +39,11 @@ const ROUTES = {
     navLabel: "Members",
     element: <Members />,
   },
+  gallery: {
+    path: "/gallery",
+    navLabel: "Gallery",
+    element: <Gallery />,
+  },
   projects: {
     path: "/projects",
     navLabel: "Projects",
@@ -51,6 +63,11 @@ const ROUTES = {
     path: "/theme",
     navLabel: "Themes",
     element: <Theme />,
+  },
+  highlights: {
+    path: "/highlight",
+    navLabel: "Highlights",
+    element: <Highlights />,
   },
   studylife: {
     path: "/studylife",
@@ -113,7 +130,9 @@ function RouteListItem({ to = "", children, onClick }: RouteListItemProps) {
     <ListItem sx={{ p: 0 }}>
       {/* @ts-ignore */}
       <ListItemButton onClick={onClick} component={Link} to={to}>
-        {children}
+        <Typography variant="button" textTransform="uppercase">
+          {children}
+        </Typography>
       </ListItemButton>
     </ListItem>
   );

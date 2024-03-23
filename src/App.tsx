@@ -23,11 +23,11 @@ function Container({ children }: ContainerProps) {
   const isLg = useMediaQuery(theme.breakpoints.up("lg"));
 
   return (
-    <Stack sx={{ height: "100vh" }}>
+    <Stack sx={{ height: "100vh", background: "none" }}>
       <Header />
       {isLg ? (
         <Stack sx={{ flexDirection: "row", flexGrow: 1, overflowY: "auto" }}>
-          <Menu sx={{ ml: 1, minWidth: 150 }} />
+          <Menu sx={{ mx: 1, minWidth: 160 }} />
           <Stack sx={{ flexGrow: 1, overflowY: "auto" }}>{children}</Stack>
         </Stack>
       ) : (
