@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
 import { theme } from "./styles";
-import { mdxComponents } from "./components/layout";
+import { NavOpenContextProvider, mdxComponents } from "./components/layout";
 import { LangContextProvider } from "./components/language/index.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -14,9 +14,11 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <CssBaseline />
       <BrowserRouter>
         <LangContextProvider>
-          <MDXProvider components={mdxComponents}>
-            <App />
-          </MDXProvider>
+          <NavOpenContextProvider>
+            <MDXProvider components={mdxComponents}>
+              <App />
+            </MDXProvider>
+          </NavOpenContextProvider>
         </LangContextProvider>
       </BrowserRouter>
     </ThemeProvider>

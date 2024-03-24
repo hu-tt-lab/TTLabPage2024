@@ -1,23 +1,17 @@
 import { AppBar, Box, Toolbar } from "../../common";
-import { MenuDrawer } from "../Menu/MenuDrawer";
-import { useState } from "react";
-import { MenuButton } from "../Menu/MenuButton";
+import { MenuButton } from "../Nav/MenuButton";
 import { useMediaQuery } from "@mui/material";
 import { theme } from "../../../styles";
 import { Logo } from "./Logo";
+import { Nav, useNavOpenContext } from "..";
 
 export function Header() {
-  const [menuIsOpen, setMenuIsOpen] = useState<boolean>(false);
+  const { setNavOpen } = useNavOpenContext();
+
   const isLg = useMediaQuery(theme.breakpoints.up("lg"));
 
   const openMenu = () => {
-    setMenuIsOpen(true);
-  };
-  const closeMenu = () => {
-    setMenuIsOpen(false);
-  };
-  const handleMenuChange = () => {
-    closeMenu();
+    setNavOpen(true);
   };
 
   const handleMenuButtonClick = () => {
@@ -25,23 +19,20 @@ export function Header() {
   };
 
   return (
-    <>
-      <AppBar
-        position="sticky"
-        color="transparent"
-        sx={{ bgcolor: "#fff6", backdropFilter: "blur(8px)" }}
-      >
-        <Toolbar variant="regular" sx={{ justifyContent: "space-between" }}>
-          <Logo />
-          <Box sx={{ flexGrow: 1 }} />
-          {!isLg && <MenuButton onClick={handleMenuButtonClick} />}
-        </Toolbar>
-      </AppBar>
-      <MenuDrawer
-        open={menuIsOpen}
-        onClick={handleMenuChange}
-        onClose={closeMenu}
-      />
-    </>
+    <AppBar
+      position="sticky"
+      color="transparent"
+      // sx={{ bgcolor: "#00695B60", backdropFilter: "blur(8px)" }}
+    >
+      <Toolbar variant="regular" sx={{ justifyContent: "space-between" }}>
+        {!isLg && (
+          <>
+            <Logo />
+            <Box sx={{ flexGrow: 1 }} />
+            <MenuButton onClick={handleMenuButtonClick} />
+          </>
+        )}
+      </Toolbar>
+    </AppBar>
   );
 }

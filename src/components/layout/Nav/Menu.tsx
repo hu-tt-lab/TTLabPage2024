@@ -9,10 +9,10 @@ export type MenuProps = {
 };
 export function Menu({ onClick, sx }: MenuProps) {
   return (
-    <Stack direction="column" sx={{ overflowY: "auto", ...sx }}>
+    <Stack sx={sx}>
       <RouteList onClick={onClick} />
-      <Box p={0.5} />
       <LangSelection />
+      <Box p={2} />
     </Stack>
   );
 }
