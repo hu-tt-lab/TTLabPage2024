@@ -43,7 +43,7 @@ export const mdxComponents: MDXComponents = {
       square
       elevation={0}
       sx={{
-        borderRadius: 1,
+        borderRadius: 2,
         borderBottom: "1px solid #ddd",
         ":before": { display: "none" },
       }}
