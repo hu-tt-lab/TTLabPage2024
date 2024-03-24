@@ -128,6 +128,7 @@ type RouteListItemProps = {
 function RouteListItem({ to = "", children, onClick }: RouteListItemProps) {
   return (
     <ListItem sx={{ p: 0 }}>
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}
       <ListItemButton onClick={onClick} component={Link} to={to}>
         <Typography variant="button" textTransform="uppercase">
