@@ -3,7 +3,7 @@ import { MenuButton } from "../Nav/MenuButton";
 import { useMediaQuery } from "@mui/material";
 import { theme } from "../../../styles";
 import { Logo } from "./Logo";
-import { Nav, useNavOpenContext } from "..";
+import { useNavOpenContext } from "..";
 
 export function Header() {
   const { setNavOpen } = useNavOpenContext();
