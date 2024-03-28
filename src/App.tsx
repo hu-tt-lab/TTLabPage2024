@@ -31,3 +31,5 @@ function Container({ children }: ContainerProps) {
 }
 
 export default App;
+
+// TODO: Gallery, News, 先生のページ, Highlights

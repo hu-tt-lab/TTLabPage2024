@@ -11,6 +11,7 @@ import {
   Typography,
 } from "../../common";
 import { Hero } from "../Hero";
+import { NewsList } from "../NewsList";
 
 export const mdxComponents: MDXComponents = {
   wrapper: (props) => <Layout px={{ xs: 2, sm: 4 }} {...props} />,
@@ -59,4 +60,5 @@ export const mdxComponents: MDXComponents = {
   ),
   AcdnDetails: AccordionDetails,
   Hero: (props) => <Hero sx={{ mx: { xs: -2, sm: -4 } }} {...props} />,
+  NewsList: (props) => <NewsList {...props} />,
 };

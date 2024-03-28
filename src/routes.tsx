@@ -1,4 +1,9 @@
-import { Link, Route, Routes as RRDRoutes } from "react-router-dom";
+import {
+  Link,
+  Route,
+  Routes as RRDRoutes,
+  useLocation,
+} from "react-router-dom";
 import {
   List,
   ListItem,
@@ -126,11 +131,18 @@ type RouteListItemProps = {
   onClick?: () => void;
 };
 function RouteListItem({ to = "", children, onClick }: RouteListItemProps) {
+  const location = useLocation();
+
   return (
     <ListItem sx={{ p: 0 }}>
-      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-      {/* @ts-ignore */}
-      <ListItemButton onClick={onClick} component={Link} to={to}>
+      <ListItemButton
+        onClick={onClick}
+        component={Link}
+        disabled={location.pathname == to}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        to={to}
+      >
         <Typography variant="button" textTransform="uppercase">
           {children}
         </Typography>
