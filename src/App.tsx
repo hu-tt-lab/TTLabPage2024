@@ -42,8 +42,9 @@ function Container({ children }: ContainerProps) {
 
 export default App;
 
-// TODO: Gallery, News, 先生のページ, Highlights
 // TODO: Add subtitle and parallax to hero
 // TODO: ハイライトに Chipを入れてタグづけ
 // TODO: メンバーもギャラリーっぽく
-// TODO: 構成員の顔写真の代わりに好きなこのの円グラフをつける
+// TODO: 構成員の顔写真の代わりに好きなことの円グラフをつける
+// TODO: 先生の個人ページ
+// TODO: 更新マニュアル作る
