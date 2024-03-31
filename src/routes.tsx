@@ -27,8 +27,15 @@ import Books from "./pages/books.mdx";
 import Internship from "./pages/internship.mdx";
 import Outreach from "./pages/outreach.mdx";
 
+type _Route = {
+  path: string;
+  navLabel: string;
+  element: ReactNode;
+  children?: _Route[];
+};
+
 // ルーティングの定義
-const ROUTES = {
+const ROUTES: { [key: string]: _Route } = {
   home: {
     path: "/",
     navLabel: "Home",

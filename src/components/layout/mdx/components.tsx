@@ -8,10 +8,12 @@ import {
   AccordionDetails,
   AccordionSummary,
   ExpandMoreIcon,
+  List,
   Typography,
 } from "../../common";
 import { Hero } from "../Hero";
-import { NewsList } from "../NewsList";
+import { NewsList, NewsListItem } from "../News";
+import { theme } from "../../../styles";
 
 export const mdxComponents: MDXComponents = {
   wrapper: (props) => <Layout px={{ xs: 2, sm: 4 }} {...props} />,
@@ -35,6 +37,30 @@ export const mdxComponents: MDXComponents = {
       paragraph
     />
   ),
+  strong: ({ ref, ...props }) => (
+    <Typography
+      {...props}
+      display="inline"
+      fontWeight="bold"
+      color={theme.palette.grey[900]}
+    />
+  ),
+  ul: ({ ref, ...props }) => (
+    <List
+      {...props}
+      sx={{
+        listStyleType: "disc",
+        listStylePosition: "outside",
+        marginLeft: 5,
+        "& li::marker": {
+          display: "list-item",
+          color: theme.palette.primary.main,
+          fontSize: "1.2em",
+          lineHeight: "1em",
+        },
+      }}
+    />
+  ),
   img: (props) => <img {...props} style={{ maxWidth: "100%" }} />,
   Ja: Ja,
   En: En,
@@ -45,7 +71,8 @@ export const mdxComponents: MDXComponents = {
       elevation={0}
       sx={{
         borderRadius: 2,
-        borderBottom: "1px solid #ddd",
+        mb: 1,
+        border: `1px solid ${theme.palette.primary.light}55`,
         ":before": { display: "none" },
       }}
       {...props}
@@ -61,4 +88,5 @@ export const mdxComponents: MDXComponents = {
   AcdnDetails: AccordionDetails,
   Hero: (props) => <Hero sx={{ mx: { xs: -2, sm: -4 } }} {...props} />,
   NewsList: (props) => <NewsList {...props} />,
+  News: NewsListItem,
 };

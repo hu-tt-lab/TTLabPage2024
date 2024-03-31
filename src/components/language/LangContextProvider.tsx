@@ -10,10 +10,11 @@ export type LangContextProviderProps = {
 
 export const LangContextProvider = ({ children }: LangContextProviderProps) => {
   const [lang, setLang] = useState<LangType>("ja");
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const setLangAndLocalStorage = (newLang: LangType) => {
     setLang(newLang);
+    setSearchParams({ lang: newLang });
     localStorage.setItem("lang", newLang);
   };
 

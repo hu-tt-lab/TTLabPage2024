@@ -28,7 +28,7 @@ export function Hero({ src, sx, title }: HeroProps) {
       }}
       justifyContent="center"
       alignItems="flex-start"
-      pl={4}
+      px={4}
     >
       {typeof title === "string" ? (
         <Typography variant="h2" mb={0}>

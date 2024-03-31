@@ -20,9 +20,10 @@ export function Header() {
 
   return (
     <AppBar
-      position="sticky"
+      position={isLg ? "fixed" : "sticky"}
+      hidden={false}
       color="transparent"
-      // sx={{ bgcolor: "#00695B60", backdropFilter: "blur(8px)" }}
+      sx={{ bgcolor: "#fff7", backdropFilter: "blur(8px)" }}
     >
       <Toolbar variant="regular" sx={{ justifyContent: "space-between" }}>
         {!isLg && (

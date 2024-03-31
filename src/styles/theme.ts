@@ -1,5 +1,5 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
-import { teal, grey } from "@mui/material/colors";
+import { teal, grey, indigo } from "@mui/material/colors";
 import "@fontsource/noto-sans-jp";
 import "@fontsource/noto-serif-jp";
 import "@fontsource/inter";
@@ -8,10 +8,12 @@ const bodyFontFamily = ["Inter", "Noto Sans JP", "sans-serif"].join(", ");
 const headingFontFamily = ["Inter", "Noto Sans JP", "sans-serif"].join(", ");
 
 const primary = teal;
+const secondary = indigo;
 
 const _theme = createTheme({
   palette: {
-    primary: primary,
+    primary,
+    secondary,
     text: {
       primary: grey[900],
     },
@@ -37,6 +39,8 @@ const _theme = createTheme({
       fontSize: 32,
       marginBottom: 12,
       marginTop: 18,
+      color: primary[800],
+      fontWeight: "bold",
     },
     h4: {
       fontFamily: headingFontFamily,
