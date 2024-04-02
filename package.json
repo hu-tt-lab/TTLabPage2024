@@ -23,6 +23,7 @@
     "@types/mdx": "^2.0.11",
     "@types/react-helmet": "^6.1.11",
     "firebase": "^10.8.1",
+    "framer-motion": "^11.0.24",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.3",
     "react": "^18.2.0",
