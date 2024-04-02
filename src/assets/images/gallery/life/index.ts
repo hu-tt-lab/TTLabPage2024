@@ -5,7 +5,7 @@ import coffee from "./coffee.jpg";
 import logo_lab_4_3 from "./logo_lab_4-3.png";
 import M_building from "./M_building.jpg";
 import pc_and_books from "./pc_and_books.png";
-import room02 from "./room02.jpg";
+import room from "./room.jpg";
 import server from "./server.jpg";
 import white_front_sketch2 from "./white_front-sketch2.jpg";
 
@@ -46,7 +46,7 @@ export const lifeImages: GalleryImage[] = [
     },
   },
   {
-    src: room02,
+    src: room,
     caption: {
       en: "Students' room",
       ja: "学生居室",

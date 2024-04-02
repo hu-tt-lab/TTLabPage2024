@@ -5,6 +5,4 @@ import {
 
 export type TypographyProps = MTypographyProps;
 
-export function Typography(props: MTypographyProps) {
-  return <MTypography {...props} />;
-}
+export const Typography = MTypography;
