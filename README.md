@@ -2,8 +2,8 @@
 
 使用しているJavaScriptライブラリ
 - React
+- Vite (ライブラリというよりはビルドツール)
 - Typescript
-- Vite
 - Material UI
 - MDX
 - Framer Motion
