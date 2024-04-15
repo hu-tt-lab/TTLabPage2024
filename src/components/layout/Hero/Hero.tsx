@@ -1,13 +1,13 @@
 import { SxProps } from "@mui/material";
-import { Box, Typography } from "../common";
-import { En, Ja, LangType } from "../language";
+import { Box, Typography } from "../../common";
+import { En, Ja, LangType } from "../../language";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
 export type HeroProps = {
   src: string;
   title?: string | { [Lang in LangType]: string };
-  colorMode?: "light" | "dark" | "dark";
+  colorMode?: "light" | "dark";
   noGradient?: boolean;
   sx?: SxProps;
 };
