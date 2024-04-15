@@ -37,6 +37,14 @@ export const mdxComponents: MDXComponents = {
       paragraph
     />
   ),
+  a: ({ ref, ...props }) => (
+    <a
+      {...props}
+      style={{
+        wordBreak: "break-all",
+      }}
+    />
+  ),
   strong: ({ ref, ...props }) => (
     <Typography
       {...props}
