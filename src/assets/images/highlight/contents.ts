@@ -3,9 +3,18 @@ import _2020_IEEJ_B from "./highlight03.jpg";
 import _2022_BrainRes from "./highlight02.jpg";
 import _2022_FrontNeurosci from "./highlight01.jpg";
 import _2024_JNSM from "./JNSM_HighlightWebSite.jpg";
+import _2024_eNeuro from "./Cover art.jpg";
 import { HighlightContent } from "./types";
 
 export const highlightContents: HighlightContent[] = [
+  {
+    id: "2024_eNeuro",
+    src: _2024_eNeuro,
+    title:
+      "Modulatory Effects on Laminar Neural Activity Induced by Near-Infrared Light    Stimulation with a Continuous Waveform to the Mouse Inferior Colliculus In Vivo",
+    citation: "Sato et al., eNeuro, 2024",
+    externalLink: "https://doi.org/10.1523/ENEURO.0521-23.2024",
+  },
   {
     id: "2024_JNSM",
     src: _2024_JNSM,
