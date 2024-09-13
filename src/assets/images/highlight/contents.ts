@@ -4,9 +4,18 @@ import _2022_BrainRes from "./highlight02.jpg";
 import _2022_FrontNeurosci from "./highlight01.jpg";
 import _2024_JNSM from "./JNSM_HighlightWebSite.jpg";
 import _2024_eNeuro from "./Cover art.jpg";
+import _2024_FiNS from "./FiNS_2024.svg";
 import { HighlightContent } from "./types";
 
 export const highlightContents: HighlightContent[] = [
+  {
+    id: "2024_FiNS",
+    src: _2024_FiNS,
+    title:
+      "Analyzing the transient response dynamics of long-term depression in the mouse auditory cortex in vitro through multielectrode-array-based spatiotemporal recordings",
+    citation: "Furukawa et al., Frontiers in Neuroscience, 2024",
+    externalLink: "https://doi.org/10.3389/fnins.2024.1448365",
+  },
   {
     id: "2024_eNeuro",
     src: _2024_eNeuro,
