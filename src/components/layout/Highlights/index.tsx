@@ -1,5 +1,5 @@
 import { useTheme } from "@mui/material";
-import { HighlightContent, highlightContents } from "../../../assets/images";
+import { HighlightContent, highlightContents } from "../../../constants";
 import { Link, OpenInNewIcon, Stack, Typography } from "../../common";
 
 export function Highlights() {

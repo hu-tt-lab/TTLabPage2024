@@ -8,7 +8,7 @@ import {
   Typography,
 } from "../../common";
 import { SxProps } from "@mui/material";
-import { GalleryImage } from "../../../assets/images";
+import { GalleryImage } from "../../../constants";
 import { useLangContext } from "../../language";
 
 export type GalleryItemDialogProps = {

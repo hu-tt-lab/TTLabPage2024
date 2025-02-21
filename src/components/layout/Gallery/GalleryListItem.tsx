@@ -1,7 +1,7 @@
 import { ImageListItemBar, useTheme } from "@mui/material";
 import { IconButton, ImageListItem, Link, OpenInNewIcon } from "../../common";
 import { GalleryItemDialog } from "./GalleryItemDialog";
-import { GalleryImage } from "../../../assets/images";
+import { GalleryImage } from "../../../constants";
 import { useLangContext } from "../../language";
 
 export type GalleryListItemProps = {

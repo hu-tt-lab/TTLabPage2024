@@ -1,66 +1,57 @@
 import { GalleryImage } from "../types";
 
-import bbq from "./bbq.jpg";
-import coffee from "./coffee.jpg";
-import logo_lab_4_3 from "./logo_lab_4-3.png";
-import M_building from "./M_building.jpg";
-import pc_and_books from "./pc_and_books.png";
-import room from "./room.jpg";
-import server from "./server.jpg";
-import white_front_sketch2 from "./white_front-sketch2.jpg";
-
 export const lifeImages: GalleryImage[] = [
   {
-    src: bbq,
+    src: "/public/images/gallery/life/bbq.jpg",
     caption: {
       en: "BBQ",
       ja: "バーベキュー",
     },
   },
   {
-    src: coffee,
+    src: "/public/images/gallery/life/coffee.jpg",
     caption: {
       en: "Coffee Break",
       ja: "コーヒーブレイク",
     },
   },
   {
-    src: logo_lab_4_3,
+    src: "/public/images/gallery/life/logo_lab_4-3.png",
     caption: {
       en: "Lab logo",
       ja: "研究室のロゴ",
     },
   },
   {
-    src: M_building,
+    src: "/public/images/gallery/life/M_building.jpg",
     caption: {
       en: "M building",
       ja: "M棟",
     },
   },
   {
-    src: pc_and_books,
+    src: "/public/images/gallery/life/pc_and_books.png",
     caption: {
       en: "PC and Books",
       ja: "PCと本",
     },
   },
   {
-    src: room,
+    src: "/public/images/gallery/life/room.jpg",
     caption: {
       en: "Students' room",
       ja: "学生居室",
     },
   },
   {
-    src: server,
+    src: "/public/images/gallery/life/server.jpg",
     caption: {
       en: "Server",
       ja: "サーバ",
     },
   },
   {
-    src: white_front_sketch2,
+    src: "/public/images/gallery/life/white_front-sketch2.jpg",
     caption: {
       en: "Mouse",
       ja: "マウス",

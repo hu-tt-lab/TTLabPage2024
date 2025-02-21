@@ -1,4 +1,4 @@
-import { LangType } from "../../../components/language";
+import { LangType } from "../../components/language";
 
 export type GalleryImage = {
   src: string;

@@ -1,7 +1,7 @@
 import { GalleryList, GalleryListItem } from ".";
 import { Box, ToggleButton, ToggleButtonGroup } from "../../common";
 import { useLangContext } from "../../language";
-import { galleryContents } from "../../../assets/images";
+import { galleryContents } from "../../../constants";
 import { Fragment, useState } from "react";
 import { useMediaQuery, useTheme } from "@mui/material";
 

@@ -2,7 +2,7 @@ import { SxProps } from "@mui/material";
 import { Box, Typography } from "../../common";
 import { En, Ja } from "../../language";
 
-import src from "../../../assets/images/top/etop.jpg";
+import src from "../../../../public/images/top/etop.jpg";
 
 export type HomeHeroProps = {
   sx?: SxProps;

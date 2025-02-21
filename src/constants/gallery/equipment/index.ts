@@ -1,162 +1,141 @@
 import { GalleryImage } from "../types";
 
-import _3DPrinter from "./3dprinter.jpg";
-import nissl_stain from "./nissl_stain.jpg";
-import brain_slices from "./brain_slices.png";
-import calcium_imaging_system from "./calcium_imaging_system.jpg";
-import calcium_imaging_result from "./calcium_imaging_result.png";
-import electrode from "./electrode.jpg";
-import fai_result from "./fai_result.jpg";
-import fai_system from "./fai_system.jpg";
-import incubator from "./incubator.jpg";
-import kyoushouten from "./kyoushouten.jpg";
-import laser_doppler from "./laser-doppler.jpg";
-import lazor_machines from "./lazor_machines.jpg";
-import mea from "./mea.png";
-import neuron from "./neuron.png";
-import operation from "./operation.jpg";
-import pc_desk from "./pc_desk.jpg";
-import safety_cabinet from "./safety-cabinet.jpg";
-import slicer from "./slicer.jpg";
-import soundproof from "./soundproof.jpg";
-import surgery_desk from "./surgery_desk.jpg";
-
 export const equipmentImages: GalleryImage[] = [
   {
-    src: _3DPrinter,
+    src: "/public/images/gallery/equipments/3dprinter.jpg",
     caption: {
       en: "3D Printer",
       ja: "3Dプリンター",
     },
   },
   {
-    src: brain_slices,
+    src: "/public/images/gallery/equipments/brain_slices.png",
     caption: {
       en: "Brain Slices",
       ja: "脳スライス",
     },
   },
   {
-    src: calcium_imaging_system,
+    src: "/public/images/gallery/equipments/calcium_imaging_system.jpg",
     caption: {
       en: "Calcium Imaging System",
       ja: "カルシウムイメージングシステム",
     },
   },
   {
-    src: calcium_imaging_result,
+    src: "/public/images/gallery/equipments/calcium_imaging_result.png",
     caption: {
       en: "Calcium Imaging",
       ja: "カルシウムイメージング",
     },
   },
   {
-    src: electrode,
+    src: "/public/images/gallery/equipments/electrode.jpg",
     caption: {
       en: "Electrode for recording neural activity",
       ja: "神経活動の記録用電極",
     },
   },
   {
-    src: fai_system,
+    src: "/public/images/gallery/equipments/fai_system.jpg",
     caption: {
       en: "FAI system",
       ja: "FAI システム",
     },
   },
   {
-    src: fai_result,
+    src: "/public/images/gallery/equipments/fai_result.jpg",
     caption: {
       en: "FAI result",
       ja: "FAI 計測結果",
     },
   },
   {
-    src: incubator,
+    src: "/public/images/gallery/equipments/incubator.jpg",
     caption: {
       en: "Incubator",
       ja: "インキュベーター",
     },
   },
   {
-    src: kyoushouten,
+    src: "/public/images/gallery/equipments/kyoushouten.jpg",
     caption: {
       en: "Confocal laser microscope",
       ja: "共振点レーザー顕微鏡",
     },
   },
   {
-    src: laser_doppler,
+    src: "/public/images/gallery/equipments/laser-doppler.jpg",
     caption: {
       en: "Laser Doppler",
       ja: "レーザードップラー",
     },
   },
   {
-    src: lazor_machines,
+    src: "/public/images/gallery/equipments/lazor_machines.jpg",
     caption: {
       en: "Infrared neural stimulation system",
       ja: "赤外光温熱刺激用装置",
     },
   },
   {
-    src: mea,
+    src: "/public/images/gallery/equipments/mea.png",
     caption: {
       en: "Multi electrode array",
       ja: "マルチ電極アレイ",
     },
   },
   {
-    src: neuron,
+    src: "/public/images/gallery/equipments/neuron.png",
     caption: {
       en: "Neuron",
       ja: "ニューロン",
     },
   },
   {
-    src: operation,
+    src: "/public/images/gallery/equipments/operation.jpg",
     caption: {
       en: "Surgical instruments",
       ja: "手術器具",
     },
   },
   {
-    src: pc_desk,
+    src: "/public/images/gallery/equipments/pc_desk.jpg",
     caption: {
       en: "Electrophysiology recording system",
       ja: "電気生理学記録システム",
     },
   },
   {
-    src: safety_cabinet,
+    src: "/public/images/gallery/equipments/safety-cabinet.jpg",
     caption: {
       en: "Safety Cabinet",
       ja: "安全キャビネット",
     },
   },
   {
-    src: nissl_stain,
+    src: "/public/images/gallery/equipments/nissl_stain.jpg",
     caption: {
       en: "Nissl Staining",
       ja: "ニッスル染色",
     },
   },
   {
-    src: slicer,
+    src: "/public/images/gallery/equipments/slicer.jpg",
     caption: {
       en: "Vibratome",
       ja: "ビブラトーム",
     },
   },
   {
-    src: soundproof,
+    src: "/public/images/gallery/equipments/soundproof.jpg",
     caption: {
       en: "Soundproof room",
       ja: "防音室",
     },
   },
   {
-    src: surgery_desk,
+    src: "/public/images/gallery/equipments/surgery_desk.jpg",
     caption: {
       en: "Surgery Desk",
       ja: "手術台",
