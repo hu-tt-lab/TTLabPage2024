@@ -1,8 +1,5 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 import { teal, grey, indigo } from "@mui/material/colors";
-import "@fontsource/noto-sans-jp";
-import "@fontsource/noto-serif-jp";
-import "@fontsource/inter";
 
 const bodyFontFamily = ["Inter", "Noto Sans JP", "sans-serif"].join(", ");
 const headingFontFamily = ["Inter", "Noto Sans JP", "sans-serif"].join(", ");
