@@ -14,13 +14,19 @@ export function NewsList({ children, sx }: NewsListProps) {
   return (
     <List
       sx={{
-        mx: 1,
+        paddingRight: 1,
+        paddingLeft: 2,
+        // border: `1px solid ${theme.palette.primary.main}`,
+        borderLeft: `1px solid ${theme.palette.primary.main}`,
+        overflowY: "auto",
+        maxHeight: 500,
         "& dt": { color: theme.palette.primary.main, fontWeight: "bold" },
         "& dd": {
-          borderLeft: `1px solid ${theme.palette.primary.main}99`,
-          marginLeft: 1,
-          paddingLeft: 2,
-          py: 0.5,
+          borderBottom: `1px solid ${theme.palette.primary.main}99`,
+          marginLeft: 0,
+          paddingLeft: 0,
+          paddingTop: 0.5,
+          paddingBottom: 1.5,
           marginBottom: 1.5,
         },
         "& p": { margin: 0, display: "inline" },

@@ -32,7 +32,13 @@ function Container({ children }: ContainerProps) {
         }}
       >
         <Nav />
-        <Stack sx={{ flexGrow: 1, overflowY: "auto", mt: isLg ? "64px" : 0 }}>
+        <Stack
+          sx={{
+            flexGrow: 1,
+            overflowY: "auto",
+            mt: isLg ? "64px" : 0,
+          }}
+        >
           {children}
         </Stack>
       </Stack>
